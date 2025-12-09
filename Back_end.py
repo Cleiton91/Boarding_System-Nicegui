@@ -17,10 +17,10 @@ load_dotenv()
 # Classe para conexão com Banco de dados
 class BoardingSystemApp:
     def __init__(self):        
-        db_user = os.getenv("DB_USER", "root")
+        db_user = os.getenv("DB_USER")
         db_password = os.getenv("DB_PASSWORD")
-        db_host = os.getenv("DB_HOST", "localhost")
-        db_name = os.getenv("DB_NAME", "boarding_system")
+        db_host = os.getenv("DB_HOST")
+        db_name = os.getenv("DB_NAME")
 
         if not db_password:
             raise RuntimeError("DB_PASSWORD não definido. Configure no arquivo .env.")
